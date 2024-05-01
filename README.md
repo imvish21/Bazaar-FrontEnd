@@ -1,2 +1,0 @@
-# Bazaar-FrontEnd
-Frontend Deployment
