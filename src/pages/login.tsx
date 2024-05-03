@@ -7,7 +7,7 @@ import { getUser, useLoginMutation } from "../redux/api/userAPI";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query/react";
 import { MessageResponse } from "../types/api-types";
 import { useDispatch } from "react-redux";
-import { userExist, userNotExist } from "../redux/reducer/userReducer";
+import { userExist } from "../redux/reducer/userReducer";
 
 const Login = () => {
   const [gender, setGender] = useState("");
