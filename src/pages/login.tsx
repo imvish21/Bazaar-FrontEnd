@@ -39,7 +39,7 @@ const Login = () => {
       } else {
         const error = res.error as FetchBaseQueryError;
         const message = (error.data as MessageResponse).message;
-        dispatch(userNotExist());
+        // dispatch(userNotExist());
         toast.error(message);
       }
     } catch (error) {
