@@ -3,16 +3,17 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { auth } from "../firebase";
-import { getUser, useLoginMutation } from "../redux/api/userAPI";
+import { useLoginMutation } from "../redux/api/userAPI";
+// import { getUser } from "../redux/api/userAPI";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query/react";
 import { MessageResponse } from "../types/api-types";
-import { useDispatch } from "react-redux";
-import { userExist } from "../redux/reducer/userReducer";
+// import { useDispatch } from "react-redux";
+// import { userExist } from "../redux/reducer/userReducer";
 
 const Login = () => {
   const [gender, setGender] = useState("");
   const [date, setDate] = useState("");
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [login] = useLoginMutation();
 
@@ -33,8 +34,8 @@ const Login = () => {
       });
 
       if ("data" in res) {
-        const data = await getUser(user.uid);
-        dispatch(userExist(data.user));
+        // const data = await getUser(user.uid);
+        // dispatch(userExist(data.user));
         toast.success(res.data.message);
       } else {
         const error = res.error as FetchBaseQueryError;
